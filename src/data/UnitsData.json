@@ -1,0 +1,56 @@
+[
+    {
+        "type": "Length",
+        "icon": {
+            "style": "fas",
+            "name": "ruler"
+        },
+        "units": [
+            {
+                "name": "Meter",
+                "abbreviation": "m",
+                "value": 1
+            },
+            {
+                "name": "Centimeter",
+                "abbreviation": "cm",
+                "value": 0.01
+            }
+        ]
+    },
+    {
+        "type": "Aera",
+        "icon": {
+            "style": "fas",
+            "name":"square"
+        }
+    },
+    {
+        "type": "Volume",
+        "icon": {
+            "style": "fas",
+            "name":"dice-d6"
+        }
+    },
+    {
+        "type": "Weight",
+        "icon": {
+            "style": "fas",
+            "name":"weight-hanging"
+        }
+    },
+    {
+        "type": "Temperature",
+        "icon": {
+            "style": "fas",
+            "name":"temperature-half"
+        }
+    },
+    {
+        "type": "Time",
+        "icon": {
+            "style": "fas",
+            "name":"clock"
+        }
+    }
+]
