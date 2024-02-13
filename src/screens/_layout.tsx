@@ -24,6 +24,9 @@ const AppLayout = () => {
                 <Stack.Screen
                     name="Converter"
                     component={ConverterScreen}
+                    options={({ route }) => ({ 
+                        title: route.params.unitType 
+                    })}
                 />
             </Stack.Navigator>
         </NavigationContainer>

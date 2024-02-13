@@ -19,7 +19,7 @@
         ]
     },
     {
-        "type": "Aera",
+        "type": "Area",
         "icon": {
             "style": "fas",
             "name":"square"
