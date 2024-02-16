@@ -1,14 +1,20 @@
 import React from "react";
 import { View, Dimensions, TouchableOpacity, StyleSheet } from "react-native";
+import { useAppDispatch, useAppSelector } from "../stores/hooks";
+import { handleButton } from "../reducers/converterReducer";
 
 import IconFontAwesome, { iconProps } from "./icons/FontAwesomeIcons";
 
+
 const Keyboard = () => {
+    const inputString = useAppSelector((state) => state.converter.inputString)
+    const dispatch = useAppDispatch();
+
     const Button = ({ icon }: { icon: iconProps }) => {
         const buttonStyles = icon.name === "0" ? [styles.button, {flex: 2}] : styles.button;
         
         return (
-            <TouchableOpacity style={buttonStyles}>
+            <TouchableOpacity style={buttonStyles} onPress={() => dispatch(handleButton(icon.name))}>
                 <IconFontAwesome icon={icon} />
             </TouchableOpacity>
         )
