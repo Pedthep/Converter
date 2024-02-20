@@ -1,16 +1,16 @@
 import React from "react";
 import { View, Dimensions, TouchableOpacity, StyleSheet } from "react-native";
 import { useAppDispatch, useAppSelector } from "../stores/hooks";
-import { handleButton } from "../reducers/converterReducer";
+import { handleButton } from "../reducers/inputSlice";
 
-import IconFontAwesome, { iconProps } from "./icons/FontAwesomeIcons";
+import IconFontAwesome, { IconProps } from "./icons/FontAwesomeIcons";
 
 
 const Keyboard = () => {
-    const inputString = useAppSelector((state) => state.converter.inputString)
+    const inputString = useAppSelector((state) => state.input.inputString)
     const dispatch = useAppDispatch();
 
-    const Button = ({ icon }: { icon: iconProps }) => {
+    const Button = ({ icon }: { icon: IconProps }) => {
         const buttonStyles = icon.name === "0" ? [styles.button, {flex: 2}] : styles.button;
         
         return (
@@ -40,7 +40,7 @@ const Keyboard = () => {
                 </View>
                 <View style={styles.row}>
                     <Button icon={{style: "fas", name: "0"}} />
-                    <Button icon={{style: "fas", name: "circle"}} />
+                    <Button icon={{style: "fas", name: "circle", size: 16}} />
                 </View>
             </View>
             <View style={[styles.col, {flex: 0.25}]}>

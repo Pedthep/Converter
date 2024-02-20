@@ -12,9 +12,49 @@
                 "value": 1
             },
             {
+                "name": "Millimeter",
+                "abbreviation": "mm",
+                "value": 0.001
+            },
+            {
                 "name": "Centimeter",
                 "abbreviation": "cm",
                 "value": 0.01
+            },
+            {
+                "name": "Kilometer",
+                "abbreviation": "km",
+                "value": 1000
+            },
+            {
+                "name": "Decimeter",
+                "abbreviation": "dm",
+                "value": 0.1
+            },
+            {
+                "name": "Light year",
+                "abbreviation": "ly",
+                "value": 9460737937559129.612109744560076
+            },
+            {
+                "name": "Micrometer",
+                "abbreviation": "µg",
+                "value": 0.000001
+            },
+            {
+                "name": "Parsec",
+                "abbreviation": "pc",
+                "value": 30856864263739790.235036735096906
+            },
+            {
+                "name": "Astronomical unit",
+                "abbreviation": "AU",
+                "value": 149597582503.066750441312868
+            },
+            {
+                "name": "Lunar distance",
+                "abbreviation": "LD",
+                "value": 38400983.065166468261587
             }
         ]
     },
@@ -23,34 +63,220 @@
         "icon": {
             "style": "fas",
             "name":"square"
-        }
+        },
+        "units": [
+            {
+                "name": "Square meter",
+                "abbreviation": "m²",
+                "value": 1
+            },
+            {
+                "name": "Square decimeter",
+                "abbreviation": "dm²",
+                "value": 0.01
+            },
+            {
+                "name": "Square centimeter",
+                "abbreviation": "cm²",
+                "value": 0.0001
+            },
+            {
+                "name": "Square kilometer",
+                "abbreviation": "km²",
+                "value": 1000000
+            },
+            {
+                "name": "Square millimeter",
+                "abbreviation": "mm²",
+                "value": 0.000001
+            },
+            {
+                "name": "Are",
+                "abbreviation": "ar",
+                "value": 100
+            },
+            {
+                "name": "Hectare",
+                "abbreviation": "ha",
+                "value": 10000
+            }
+        ]
+        
     },
     {
         "type": "Volume",
         "icon": {
             "style": "fas",
             "name":"dice-d6"
-        }
+        },
+        "units": [
+            {
+                "name": "Milliliter",
+                "abbreviation": "ml",
+                "value": 1
+            },
+            {
+                "name": "Hectoliter",
+                "abbreviation": "hl",
+                "value": 100000
+            },
+            {
+                "name": "Cubic meter",
+                "abbreviation": "m³",
+                "value": 1000000
+            },
+            {
+                "name": "Cubic centimeter",
+                "abbreviation": "cm³",
+                "value": 1
+            },
+            {
+                "name": "Deciliter",
+                "abbreviation": "dl",
+                "value": 100
+            },
+            {
+                "name": "Centiliter",
+                "abbreviation": "cl",
+                "value": 10
+            },
+            {
+                "name": "Cubic decimeter",
+                "abbreviation": "dm³",
+                "value": 1000
+            },
+            {
+                "name": "Liter",
+                "abbreviation": "l",
+                "value": 1000
+            },
+            {
+                "name": "Cubic millimeter",
+                "abbreviation": "mm³",
+                "value": 0.001
+            }
+        ]
     },
     {
         "type": "Weight",
         "icon": {
             "style": "fas",
             "name":"weight-hanging"
-        }
+        },
+        "units": [
+            {
+                "name": "Gram",
+                "abbreviation": "g",
+                "value": 1
+            },
+            {
+                "name": "Microgram",
+                "abbreviation": "µg",
+                "value": 0.000001
+            },
+            {
+                "name": "Quintal",
+                "abbreviation": "q",
+                "value": 100000
+            },
+            {
+                "name": "Carat",
+                "abbreviation": "ct",
+                "value": 0.2
+            },
+            {
+                "name": "Ton",
+                "abbreviation": "t",
+                "value": 1000000
+            },
+            {
+                "name": "Milligram",
+                "abbreviation": "mg",
+                "value": 0.001
+            },
+            {
+                "name": "Kilogram",
+                "abbreviation": "kg",
+                "value": 1000
+            }
+        ]
     },
     {
         "type": "Temperature",
         "icon": {
             "style": "fas",
             "name":"temperature-half"
-        }
+        },
+        "units": [
+            {
+                "name": "Celsius",
+                "abbreviation": "℃",
+                "value": 1
+            },
+            {
+                "name": "Fahrenheit",
+                "abbreviation": "℉",
+                "value": -17.22222
+            },
+            {
+                "name": "Kelvin",
+                "abbreviation": "K",
+                "value": -272.15
+            },
+            {
+                "name": "Rankine",
+                "abbreviation": "R",
+                "value": -272.59444
+            }
+        ]
     },
     {
         "type": "Time",
         "icon": {
             "style": "fas",
             "name":"clock"
-        }
+        },
+        "units": [
+            {
+                "name": "Minute",
+                "abbreviation": "min",
+                "value": 1
+            },
+            {
+                "name": "Second",
+                "abbreviation": "s",
+                "value": 0.01667
+            },
+            {
+                "name": "Hour",
+                "abbreviation": "h",
+                "value": 60
+            },
+            {
+                "name": "Millisecond",
+                "abbreviation": "ms",
+                "value": 0.00002
+            },
+            {
+                "name": "Day",
+                "abbreviation": "d",
+                "value": 1440
+            },
+            {
+                "name": "Week",
+                "abbreviation": "wk",
+                "value": 10080
+            },
+            {
+                "name": "Month",
+                "abbreviation": "m",
+                "value": 43800
+            },
+            {
+                "name": "Year",
+                "abbreviation": "y",
+                "value": 525949.2
+            }
+        ]
     }
 ]

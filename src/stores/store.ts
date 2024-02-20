@@ -1,11 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
-import converterReducer from '../reducers/converterReducer'
+import { configureStore } from '@reduxjs/toolkit';
+import logger from 'redux-logger';
+import rootReducer from '../reducers/reducers';
 
 const store = configureStore({
-    reducer: {
-        converter: converterReducer
-    },
-})
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+    devTools: process.env.NODE_ENV !== 'production',
+});
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>

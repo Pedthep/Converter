@@ -3,7 +3,7 @@ import { View, StyleSheet } from "react-native";
 
 import UnitsData from "../data/UnitsData.json";
 import UnitTypeButton from "../components/UnitTypeButton";
-import type { iconProps } from "../components/icons/FontAwesomeIcons";
+import type { IconProps } from "../components/icons/FontAwesomeIcons";
 
 const HomeScreen = () => {
     const groupUnitType = [];
@@ -20,7 +20,7 @@ const HomeScreen = () => {
                         <UnitTypeButton
                             key={index} 
                             unitType={unitType.type}
-                            icon={unitType.icon as iconProps}
+                            icon={unitType.icon as IconProps}
                         />
                     ))}
                 </View>

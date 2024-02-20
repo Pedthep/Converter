@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import type { RootStackParamList } from "../type";
+import type { RootStackParamList, StackScreenProps } from "../type";
 import HomeScreen from "./HomeScreen";
 import ConverterScreen from "./ConverterScreen";
 
@@ -24,9 +24,7 @@ const AppLayout = () => {
                 <Stack.Screen
                     name="Converter"
                     component={ConverterScreen}
-                    options={({ route }) => ({ 
-                        title: route.params.unitType 
-                    })}
+                    options={({ route }: StackScreenProps) => ({ title: route.params.unitType })}
                 />
             </Stack.Navigator>
         </NavigationContainer>

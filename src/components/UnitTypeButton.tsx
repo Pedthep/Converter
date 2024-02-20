@@ -3,20 +3,25 @@ import { StyleSheet, Text, TouchableOpacity, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import IconFontAwesome from "./icons/FontAwesomeIcons";
-import type { iconProps } from "./icons/FontAwesomeIcons";
-import { StackScreenProps } from "../type";
+import type { IconProps } from "./icons/FontAwesomeIcons";
+import type { StackScreenProps } from "../type";
+
+import { useAppDispatch } from "../stores/hooks";
+import { setUnitTypeCurrent } from "../reducers/converterSlice";
 
 type UnitTypeButtonProps = {
     unitType: string;
-    icon: iconProps
+    icon: IconProps
 }
 
 const UnitTypeButton: React.FC<UnitTypeButtonProps> = ({unitType ,icon}) => {
     const navigation = useNavigation<StackScreenProps>();
+    const dispatch = useAppDispatch();
 
-    const goToConverter = () => (
-        navigation.navigate('Converter', {unitType: unitType})
-    );
+    const goToConverter = () => {
+        navigation.navigate("Converter", {unitType: unitType}),
+        dispatch(setUnitTypeCurrent(unitType))
+    };
 
     
     return (

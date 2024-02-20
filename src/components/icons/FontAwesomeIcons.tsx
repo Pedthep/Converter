@@ -8,13 +8,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 library.add(fas, far, fab)
 
-export type iconProps = {
+export type IconProps = {
     style: IconPrefix;
     name: IconName;
+    size?: number;
 }
 
-const IconFontAwesome:React.FC<{ icon: iconProps}> = ({icon}) => {
-    const sizeIcon = icon.name === "circle" ? 16 : 32;
+const IconFontAwesome:React.FC<{ icon: IconProps}> = ({icon}) => {
+    const sizeIcon = icon.size || 32;
 
     return (
         <FontAwesomeIcon icon={[icon.style, icon.name]} size={sizeIcon} />

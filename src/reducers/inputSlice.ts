@@ -1,16 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../stores/store";
 
-interface ConverterState {
+interface InputState {
     inputString: string,
 }
 
-const initialState: ConverterState = {
+const initialState: InputState = {
     inputString: "0",
 }
 
-export const ConverterSlice = createSlice({
-    name: 'converter',
+export const inputSlice = createSlice({
+    name: 'input',
     initialState,
     reducers: {
         handleButton: (state, action: PayloadAction<string>) => {
@@ -18,13 +18,15 @@ export const ConverterSlice = createSlice({
             const buttonValue = action.payload
 
             if (buttonValue === "c") {
-                //when buttonValue = c will state = initalState
+                //when buttonValue = c will state = initialState
                 state.inputString = initialState.inputString
             } else if (buttonValue === "delete-left") {
                 //when buttonValue = delete-left
                 if (state.inputString.length > 1) {
                     //when length state > 1 will delete the last one
                     state.inputString = state.inputString.slice(0, -1);
+                } else if (state.inputString.length < 2 && state.inputString !== "0") {
+                    state.inputString = "0";
                 }
             } else if (buttonValue === "circle") {
                 //when buttonValue = circle will add "."
@@ -42,8 +44,8 @@ export const ConverterSlice = createSlice({
     }
 })
 
-export const { handleButton } = ConverterSlice.actions
+export const { handleButton } = inputSlice.actions
 
-export const selectConverter = (state: RootState) => state.converter.inputString
+export const selectInput = (state: RootState) => state.input.inputString
 
-export default ConverterSlice.reducer
+export default inputSlice.reducer
